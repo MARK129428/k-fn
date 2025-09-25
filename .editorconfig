@@ -1,0 +1,27 @@
+# 表示这是根目录的配置文件，不再向上查找
+root = true
+
+# 匹配所有文件
+[*]
+# 字符集：UTF-8（通用）
+charset = utf-8
+# 换行符：LF（跨平台通用，避免 Windows 的 CRLF 导致的 Git 警告）
+end_of_line = lf
+# 行尾是否自动删除空格（推荐开启，避免多余空格提交）
+trim_trailing_whitespace = true
+# 文件末尾是否加一个空行（多数语言规范要求）
+insert_final_newline = true
+# 缩进风格：空格（而非制表符 Tab）
+indent_style = space
+# 缩进宽度：2 个空格（前端项目常用，可根据团队调整为 4）
+indent_size = 2
+
+# 针对特定文件类型的特殊配置（覆盖上面的默认规则）
+[*.md]
+# Markdown 文件不自动删除行尾空格（避免列表符号后的空格被误删）
+trim_trailing_whitespace = false
+
+# TypeScript/JavaScript 配置（可选，与上面默认一致可省略）
+[*.{ts,js,tsx,jsx}]
+indent_style = space
+indent_size = 2
