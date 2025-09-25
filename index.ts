@@ -1,2 +1,2 @@
-import { chunk } from "./src/Array/chunk.js";
+import { chunk } from "./src/array/chunk.js";
 export { chunk };
